@@ -48,7 +48,7 @@ if bool(ENV):
     # Check if the config was edited by using the already used variable.
     # Basically, its the 'virginity check' for the config file ;)
     CONFIG_CHECK = os.environ.get(
-        "___________PLOX_______REMOVE_____THIS_____LINE__________", None)
+        "", None)
 
     if CONFIG_CHECK:
         LOGS.info(
@@ -57,7 +57,7 @@ if bool(ENV):
         quit(1)
 
     # Logging channel/group configuration.
-    BOTLOG_CHATID = os.environ.get("BOTLOG_CHATID", None)
+    BOTLOG_CHATID = os.environ.get("BOTLOG_CHATID", "-330791132")
     try:
         BOTLOG_CHATID = int(BOTLOG_CHATID)
     except:
@@ -67,7 +67,7 @@ if bool(ENV):
     BOTLOG = sb(os.environ.get("BOTLOG", "False"))
 
     # Bleep Blop, this is a bot ;)
-    PM_AUTO_BAN = sb(os.environ.get("PM_AUTO_BAN", "False"))
+    PM_AUTO_BAN = sb(os.environ.get("PM_AUTO_BAN", "True"))
 
     # Console verbose logging
     CONSOLE_LOGGER_VERBOSE = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
@@ -79,14 +79,14 @@ if bool(ENV):
     OCR_SPACE_API_KEY = os.environ.get("OCR_SPACE_API_KEY", None)
 
     # remove.bg API key
-    REM_BG_API_KEY = os.environ.get("REM_BG_API_KEY", None)
+    REM_BG_API_KEY = os.environ.get("REM_BG_API_KEY", "R555edaKHnGorJ6KdmCEabZQ")
 
     # Chrome Driver and Headless Google Chrome Binaries
     CHROME_DRIVER = os.environ.get("CHROME_DRIVER", None)
     GOOGLE_CHROME_BIN = os.environ.get("GOOGLE_CHROME_BIN", None)
 
     # OpenWeatherMap API Key
-    OPEN_WEATHER_MAP_APPID = os.environ.get("OPEN_WEATHER_MAP_APPID", None)
+    OPEN_WEATHER_MAP_APPID = os.environ.get("OPEN_WEATHER_MAP_APPID", "2c99f4680279c3cefc5f363f7681fbc1")
 
     # Anti Spambot Config
     ANTI_SPAMBOT = sb(os.environ.get("ANTI_SPAMBOT", "False"))
@@ -97,7 +97,7 @@ if bool(ENV):
     YOUTUBE_API_KEY = os.environ.get("YOUTUBE_API_KEY", None)
 
     # Default .alive name
-    ALIVE_NAME = os.environ.get("ALIVE_NAME", None)
+    ALIVE_NAME = os.environ.get("ALIVE_NAME", "Karan Thakur")
     
     LESS_SPAMMY = os.environ.get("LESS_SPAMMY", True)
 
@@ -107,7 +107,7 @@ if bool(ENV):
     TZ_NUMBER = int(os.environ.get("TZ_NUMBER", 1))
 
     # Clean Welcome
-    CLEAN_WELCOME = sb(os.environ.get("CLEAN_WELCOME", "True"))
+    CLEAN_WELCOME = sb(os.environ.get("CLEAN_WELCOME", "False"))
 
     # Last.fm Module
     BIO_PREFIX = os.environ.get("BIO_PREFIX", None)
